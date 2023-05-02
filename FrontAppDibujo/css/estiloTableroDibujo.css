@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f89ae8;
+}
+
+.contenedorPrincipal{
+    display: flex;
+    width: 100%;
+    max-width: 1050px;
+    gap: 10px;
+    padding: 10px;
+}
+
+section{
+    background-color: #fff;
+    border-radius: 7px;
+
+}
+
+.sideBarHerramientas{
+    width: 210px;
+    pad: 15px 22px 0;
+}
+
+.sideBarHerramientas .filaSideBar{
+    margin: 20px;
+}
+
+.filaSideBar .opcionesDeDibujo{
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.filaSideBar .opcionesDeDibujo li{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.opcion:is(:hover, .active) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+    color: #f89ae8;;
+}
+
+.opcion :where(span, label){
+    cursor: pointer;
+    color: darkslategrey;
+    padding-left: 10px;
+}
+
+.opcion:is(:hover, .active) :where(span, label){
+    color: #f89ae8;
+}
+
+.opcion #rellenarFigura{
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+}
+
+#rellenarFigura:checked ~ label{
+    color: #f89ae8;
+}
+
+.opcion #deslizadorTamano{
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.colores .opcionesDeDibujo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colores .opcion{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-top: 3px;
+    position: relative;
+}
+
+.colores .opcion:nth-child(1){
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+}
+.colores .opcion:nth-child(2){
+    background-color: #000;
+}
+.colores .opcion:nth-child(3){
+    background-color: red;
+}
+.colores .opcion:nth-child(4){
+    background-color: green;
+}
+.colores .opcion:nth-child(5){
+    background-color: blue;
+}
+
+.colores .opcion.selected::before{
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    top: 50%;
+    left: 50%;
+    background-color: inherit;
+    border-radius: inherit;
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+}
+
+.colores .opcion:first-child.selected::before{
+    border-color: #ccc;
+}
+
+.opcion #selectorColor{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.botones button{
+    cursor: pointer;
+    width: 100%;
+    color: #fff;
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    margin-bottom: 13px;
+    background: none;
+    border-radius: 5px;
+}
+
+.botones .borrarTablero{
+    color: #6C757D;
+    border: 1px solid #6C757D;
+}
+
+.borrarTablero:hover{
+    color:#fff;
+    background: #6C757D;
+    transition: all 0.3s ease;
+}
+
+.botones .guardarImagen{
+    background: #f89ae8;
+    border: 1px solid #f89ae8;
+}
+
+img{
+    height: 20px;
+}
+
+.tableroDeDibujo{
+    flex: 1
+}
+
+.tableroDeDibujo canvas{
+    width: 100%;
+    height: 100%;
+}

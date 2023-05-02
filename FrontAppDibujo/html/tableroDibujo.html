@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canva</title>
+    <link rel="stylesheet" href="/css/estiloTableroDibujo.css">
+</head>
+
+<body>
+    <div class="contenedorPrincipal">
+
+        <section class="sideBarHerramientas">
+
+            <div class="filaSideBar">
+                <label class="descripcion">Formas</label>
+                <ul class="opcionesDeDibujo">
+                    <li class="opcion herramienta" id="rectangulo">
+                        <img src="/img/iconoRectangulo.png" alt="iconoRectangulo">
+                        <span>Rectangulo</span>
+                    </li>
+                    <li class="opcion herramienta" id="circulo">
+                        <img src="/img/iconoCirculo.png" alt="iconoCirculo">
+                        <span>Circulo</span>
+                    </li>
+                    <li class="opcion herramienta" id="triangulo">
+                        <img src="/img/iconoTriangulo.png" alt="iconoTriangulo">
+                        <span>Triangulo</span>
+                    </li>
+                    <li class="opcion">
+                        <input type="checkbox" id="rellenarFigura">
+                        <label for="rellenarFigura">Rellenar figura</label>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="filaSideBar">
+                <label class="descripcion">Opciones</label>
+                <ul class="opcionesDeDibujo">
+                    <li class="opcion active herramienta" id="pincel">
+                        <img src="/img/iconoPincel.png" alt="iconoPincel">
+                        <span>Pincel</span>
+                    </li>
+                    <li class="opcion herramienta" id="borrador">
+                        <img src="/img/iconoBorrador.png" alt="iconoBorrador">
+                        <span>Borrador</span>
+                    </li>
+                    <li class="opcion">
+                        <input type="range" id="deslizadorTamano" min="1" max="30" value="5">
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="filaSideBar colores">
+                <label class="descripcion">Colores</label>
+                <ul class="opcionesDeDibujo">
+                    <li class="opcion"></li>
+                    <li class="opcion selected"></li>
+                    <li class="opcion"></li>
+                    <li class="opcion"></li>
+                    <li class="opcion">
+                        <input type="color" id="selectorColor" value="blue">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filaSideBar botones">
+                <button class="borrarTablero">Borrar tablero</button>
+                <button class="guardarImagen">Guardar imagen</button>
+            </div>
+
+        </section>
+        <section class="tableroDeDibujo">
+            <canvas></canvas>
+        </section>
+    </div>
+
+    <script src="/js/scriptCanva.js" defer></script>
+</body>
+
+</html>
